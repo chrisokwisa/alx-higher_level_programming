@@ -7,4 +7,4 @@ if number > 5:
 elif number == 0:
     print("Last digit of 0 is 0 and is 0")
 else:
-    print("Last digit of -98 is -8 and is less than 6 not 0")
+    print("Last digit of -98 is -8 and is less than 6 and not 0")

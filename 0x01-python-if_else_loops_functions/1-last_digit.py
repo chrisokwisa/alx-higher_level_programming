@@ -2,7 +2,6 @@
 import random
 number = random.randint(-10000, 10000)
 number = number % 10
-last digit = number % 10
 if number > 5:
     print("Last digit of 98 is 8 and is greater than 5")
 elif number == 0:

@@ -24,4 +24,4 @@ class square:
         Returns:
         int: The return value.Returns the area
         """
-        return self.__size * self.__sizve
+        return self.__size * self.__size

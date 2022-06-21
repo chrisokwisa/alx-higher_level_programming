@@ -1,7 +1,0 @@
-#!/usr/bin/python3
-"This module writes an empty square that defines a square"
-
-
-class square:
-  "An empty class"
-   pass

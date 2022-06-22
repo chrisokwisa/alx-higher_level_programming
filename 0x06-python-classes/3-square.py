@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""This module creates a class named square"""
+"""This module creates a class named Square"""
 
 
-class square:
-    """A class named square
-
+class Square:
+    """A class named Square
     Attributes:
     attr1 (size): size of square
     """
@@ -20,8 +19,8 @@ class square:
         self.__size = size
 
     def area(self):
-        """calculates the area based on size of square
+        """Calculates the area based on size of square
         Returns:
-        int: The return value.Returns the area
+        int: The return value. Returns the area
         """
         return self.__size * self.__size

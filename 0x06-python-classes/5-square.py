@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""This module creates a class module square"""
+"""This module creates a class named Square"""
 
 
-class square:
-    """A class named square
-
+class Square:
+    """A class named Square
     Attributes:
     attr1 (size): size of square
     """
@@ -16,11 +15,11 @@ class square:
         self.size = size
 
     def area(self):
-        """Calculates the area based on size ofsquare
+        """Calculates the area based on size of square
         Returns:
         int: The return value. Returns the area
         """
-        return self.__size * size.__size
+        return self.__size * self.__size
 
     @property
     def size(self):
@@ -37,7 +36,7 @@ class square:
         self.__size = value
 
     def my_print(self):
-        """Prints in stdout the square with the # character"""
+        """prints in stdout the square with the # character"""
         if self.__size > 0:
             for row in range(self.__size):
                 for column in range(self.__size):

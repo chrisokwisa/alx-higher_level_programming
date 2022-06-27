@@ -77,15 +77,3 @@ class Rectangle:
         """Finalizer when instance is deleted"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

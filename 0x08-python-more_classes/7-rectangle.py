@@ -4,12 +4,11 @@
 
 class Rectangle:
     """A class named Rectangle
-
     Attributes:
     attr1(width): width of rectangle
     attr2(height): height of rectangle
     attr3(number_of_instances): number of instances
-    attt4(print_symbol): symbol for representation
+    attr4(print_symbol): symbol for representation
     """
     number_of_instances = 0
     print_symbol = '#'
@@ -28,7 +27,7 @@ class Rectangle:
     def height(self, value):
         """Sets the height of the class instance"""
         if type(value) != int:
-            raise TypeError("height must be an intager")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
@@ -38,7 +37,7 @@ class Rectangle:
         """Gets the width of the class instance"""
         return self.__width
 
-    @width.setterr
+    @width.setter
     def width(self, value):
         """Sets the width of the class instance"""
         if type(value) != int:
@@ -52,7 +51,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the perimeter of the class instance"""
+        """Returns the permimeter of the class instance"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
@@ -70,11 +69,23 @@ class Rectangle:
         return stringrep
 
     def __repr__(self):
-        """Returns the string resentation of the class instance for
+        """Returns the string representation of the class instance for
         recreation"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Finalizer when the instance is deleted"""
+        """Finalizer when instance is deleted"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

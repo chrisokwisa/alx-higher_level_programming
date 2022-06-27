@@ -65,14 +65,14 @@ class Rectangle:
         for row in range(self.__height):
             for column in range(self.__width):
                 stringrep += str(self.print_symbol)
-                if row < self.__height - 1:
+            if row < self.__height - 1:
                 stringrep += "\n"
         return stringrep
 
     def __repr__(self):
         """Returns the string resentation of the class instance for
         recreation"""
-        return "Rectangle({:d}), {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
         """Finalizer when the instance is deleted"""

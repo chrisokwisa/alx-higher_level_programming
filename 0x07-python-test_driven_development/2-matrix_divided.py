@@ -12,7 +12,7 @@ def matrix_divided(matrix, div):
         list: New matrix
     """
     if type(matrix) != list:
-        raise TypeError("matrix must be matrix (list of lists) of integers/fl\
+        raise TypeError("matrix must be a matrix (list of lists) of integers/fl
 oats")
     for row in matrix:
         if type(row) != list:

@@ -1,4 +1,3 @@
-
 This doctest checks a function that prints My name is <first name> <last name>
 Import module
 >>> text_indentation = __import__('5-text_indentation').text_indentation

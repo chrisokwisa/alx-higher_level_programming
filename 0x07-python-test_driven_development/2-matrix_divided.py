@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """This module defines a function that divides all elements of a matrix
 """

@@ -2,7 +2,7 @@
 """This module defines a base_geometry"""
 
 
-class Base_geometry:
+class BaseGeometry:
     """A class base_geometry
 
     Attributes:

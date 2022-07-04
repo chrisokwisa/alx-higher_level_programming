@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """A class named base_geometry
+    """A class called BaseGeometry
 
     Attributes:
     attr1(area): Raises an exception

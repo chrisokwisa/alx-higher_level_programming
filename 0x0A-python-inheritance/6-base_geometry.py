@@ -1,13 +1,14 @@
+
 #!/usr/bin/python3
-"""This module defines a base_geometry"""
+"""This module creates a class named BaseGeometry"""
 
 
 class BaseGeometry:
-    """A class called base_geometry
+    """An class named BaseGeometry
 
     Attributes:
     attr1(area): Raises an exception
     """
     def area(self):
         """raises an exception"""
-        raises Exception("area() is not implemented")
+        raise Exception("area() is not implemented")

@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This module creates a class named square"""
+"""This modle creates a class named Square"""
 
 
-Rectangle = __import__('9-rectangle').Square
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """A class named a square
+    """A class named Square
 
     Attributes:
     attr1(size): size of square
@@ -20,4 +20,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """Returns informal string representation"""
-        return "[Square] {} {}".format(self.__size, self.__size)
+        return "[Square] {}/{}".format(self.__size, self.__size)

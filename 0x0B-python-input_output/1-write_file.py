@@ -3,7 +3,7 @@
 
 
 def number_of_lines(filename=""):
-    """Returns the number of lines of text of a file
+    """Returns the number of lines of a text file
     Args:
     filename (str): Filename
     """

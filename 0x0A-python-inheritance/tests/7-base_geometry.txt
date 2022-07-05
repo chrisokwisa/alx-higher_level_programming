@@ -1,4 +1,3 @@
-
 This doctest cheks a script that creates a BaseGeometry class.
 Import the module
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry

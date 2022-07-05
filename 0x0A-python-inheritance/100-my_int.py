@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module creates aclass named MyInt
+This module creates a class named MyInt
 """
 
 
@@ -10,5 +10,9 @@ class MyInt(int):
     """
 
     def __eq__(self, other):
-        """swaps the eq builtin"""
+        """Swaps the eq builtin"""
         return int.__ne__(self, other)
+
+    def __ne__(self, other):
+        """Swaps the ne builtin"""
+        return int.__eq__(self, other)

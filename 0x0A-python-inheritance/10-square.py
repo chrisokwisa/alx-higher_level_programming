@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This mudule creates a Square class that inherits from rectangle"""
+"""This mudule creates a Square class"""
 
 
 Rectangle = __import__('10-square').Square

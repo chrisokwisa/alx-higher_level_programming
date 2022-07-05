@@ -6,7 +6,7 @@ BaseGeometry = __import__('9-rectangle').Rectangle
 
 
 class Rectangle(BaseGeometry):
-    """A class named Rectangle
+    """A class named BaseGeometry
 
     Attributes:
     attr1(width): width of rectangle

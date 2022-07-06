@@ -15,7 +15,8 @@
 * What is deserialization
 * How to convert a Python data structure to a JSON string
 * How to convert a JSON string to a Python data structure
-# [0.Read file](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/0-read_file.py)
+
+ [0.Read file](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/0-read_file.py)
 * write a function that reads a text file (UTF8) and prints it to stdout:
 1. Number of lines
 * Write a function that returns the number of lines of a text file:
@@ -33,7 +34,8 @@
 * Write a function that writes an Object to a text file, using a JSON representation:
 8. Create object from a JSON file
 * Write a function that creates an Object from a “JSON file”:
-9. Load, add, save
+
+[9. Load, add, save](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/7-add_item.py]
 * Write a script that adds all arguments to a Python list, and then save them to a file:
 10. Class to JSON
 * Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:

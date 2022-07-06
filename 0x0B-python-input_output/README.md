@@ -15,13 +15,13 @@
 * What is deserialization
 * How to convert a Python data structure to a JSON string
 * How to convert a JSON string to a Python data structure
-[0.Read file](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/0-read_file.py)
+# [0.Read file](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/0-read_file.py)
 * write a function that reads a text file (UTF8) and prints it to stdout:
 1. Number of lines
 * Write a function that returns the number of lines of a text file:
 2. Read n lines
 * Write a function that reads n lines of a text file (UTF8) and prints it to stdout:
-3. Write to a file
+# [3. Write to a file](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/1-write_file.py)
 * Write a function that writes a string to a text file (UTF8) and returns the number of characters written:
 4. Append to a file
 * Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added:

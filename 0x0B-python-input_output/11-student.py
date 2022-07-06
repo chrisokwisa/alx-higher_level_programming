@@ -1,23 +1,22 @@
 #!/usr/bin/python3
-"""This mobule defines a student class"""
+"""This modle creates a class named Student"""
 
 
-class student:
-    """A class named stuednt
-
+class Student:
+    """A class named Student
     Attributes:
     attr1(first_name): first name of student
     attr2(last_name): last name of student
     attr3(age): age of student
     """
     def __init__(self, first_name, last_name, age):
-        """initializes an instance"""
+        """Initializes an instance"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to _json(self, attrs=None):
-        """Retrieves a dictionary representation of student"""
+    def to_json(self, attrs=None):
+        """Retrieves dictionary representation of student"""
         if type(attrs) is list and all(type(x) is str for x in attrs):
             dictionary = {}
             for i in attrs:

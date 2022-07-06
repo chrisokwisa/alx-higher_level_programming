@@ -41,7 +41,7 @@
 8. Create object from a JSON file
 * Write a function that creates an Object from a “JSON file”:
 
-[9. Load, add, save](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/7-add_item.py]
+[9. Load, add, save](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/7-add_item.py)
 * Write a script that adds all arguments to a Python list, and then save them to a file:
 
 [10. Class to JSON](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x0B-python-input_output/8-class_to_json.py)

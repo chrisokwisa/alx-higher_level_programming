@@ -64,7 +64,6 @@ class Test_Base_creation(unittest.TestCase):
     def test_idt(self):
         self.assertEqual((20, 30), Base((20, 30)).id)
 
-    self.assertTrue(len(Base.to_json_string(list_dicts)) == 107)
     def test_ids(self):
         self.assertEqual({1, 2, 3}, Base({1, 2, 3}).id)
 
@@ -92,8 +91,9 @@ class Test_Base_creation(unittest.TestCase):
         r1 = Rectangle(1, 6, 7, 21, 4)
         r2 = Rectangle(4, 2, 4, 10, 12)
         list_dicts = [r1.to_dictionary(), r2.to_dictionary()]
+        self.assertTrue(len(Base.to_json_string(list_dicts)) == 107)
 
-   def test_to_json_stringsqua(self):
+    def test_to_json_stringsqua(self):
         s = Square(3, 2, 3, 4)
         self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
 
@@ -157,42 +157,8 @@ class Test_Base_creation(unittest.TestCase):
         Square.save_to_file([s])
         with open("Square.json", "r") as f:
             self.assertTrue(len(f.read()) == 42)
-    @classmethod
-    def Delete_Files(self):
-        """ Delete created files if exists """
-        try:
-            os.remove("Rectangle.json")
-        except IOError:
-            pass
-        try:
-            os.remove("Square.json")
-        except IOError:
-            pass
-        try:
-            os.remove("Base.json")
-        except IOError:
-            pass
 
-    def test_save_to_file_testone(self):
-        r = Rectangle(19, 7, 12, 18, 15)
-        Rectangle.save_to_file([r])
-        with open("Rectangle.json", "r") as f:
-            self.assertTrue(len(f.read()) == 56)
-
-    def test_save_to_file_tworecs(self):
-        r1 = Rectangle(15, 7, 2, 8, 5)
-        r2 = Rectangle(12, 14, 11, 12, 13)
-        Rectangle.save_to_file([r1, r2])
-        with open("Rectangle.json", "r") as f:
-            self.assertTrue(len(f.read()) == 110)
-
-    def test_save_to_file_squareone(self):
-        s = Square(15, 17, 21, 18)
-        Square.save_to_file([s])
-        with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 42)
-
-   def test_save_to_file_twosqua(self):
+    def test_save_to_file_twosqua(self):
         s1 = Square(10, 5, 6, 4)
         s2 = Square(18, 11, 12, 13)
         Square.save_to_file([s1, s2])
@@ -200,30 +166,6 @@ class Test_Base_creation(unittest.TestCase):
             self.assertTrue(len(f.read()) == 81)
 
     def test_save_to_file_base(self):
-        s = Square(11, 17, 12, 18)
-        Base.save_to_file([s])
-        with open("Base.json", "r") as f:
-            self.assertTrue(len(f.read()) == 42)
-
-    def test_save_to_file_overwrite(self):
-        s = Square(19, 2, 39, 2)
-        Square.save_to_file([s])
-        s = Square(10, 17, 12, 18)
-        Square.save_to_file([s])
-        with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 42)
-
-    def test_save_to_file_none(self):
-        Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())   def test_save_to_file_twosqua(self):
-        s1 = Square(10, 5, 6, 4)
-        s2 = Square(18, 11, 12, 13)
-        Square.save_to_file([s1, s2])
-        with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 81)
-
-  def test_save_to_file_base(self):
         s = Square(11, 17, 12, 18)
         Base.save_to_file([s])
         with open("Base.json", "r") as f:
@@ -255,7 +197,7 @@ class Test_Base_creation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square.save_to_file([], 1)
 
-   """ From json_string exercises excepcions """
+    """ From json_string exercises excepcions """
 
     def test_from_json_string_type(self):
         list_input = [{"id": 10, "width": 5, "height": 3}]
@@ -284,12 +226,7 @@ class Test_Base_creation(unittest.TestCase):
         list_output = Square.from_json_string(json_list_input)
         self.assertEqual(list_input, list_output)
 
-self):
-        r1 = Rectangle(30, 50, 4, 2, 17)
-        r1_dictionary = r1.to_dictionary()
-        r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (17) 4/2 - 30/50", str(r1))
-   def test_from_json_string_twosqua(self):
+    def test_from_json_string_twosqua(self):
         list_input = [
             {"id": 189, "size": 100, "height": 40},
             {"id": 77, "size": 10, "height": 70}
@@ -318,13 +255,58 @@ self):
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
         self.assertEqual("[Rectangle] (17) 4/2 - 30/50", str(r1))
-self):
-        r1 = Rectangle(30, 50, 4, 2, 17)
+
+    def test_create_rectangle_new(self):
+        r1 = Rectangle(30, 50, 10, 4, 17)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (17) 4/2 - 30/50", str(r1))
-self):
-        r1 = Rectangle(30, 50, 4, 2, 17)
+        self.assertEqual("[Rectangle] (17) 10/4 - 30/50", str(r2))
+
+    def test_create_rectangle_isnot(self):
+        r1 = Rectangle(30, 50, 10, 15, 70)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (17) 4/2 - 30/50", str(r1))
+        self.assertIsNot(r1, r2)
+
+    def test_create_rectangle_equal(self):
+        r1 = Rectangle(15, 2, 4, 1, 6)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertNotEqual(r1, r2)
+
+    def test_create_square(self):
+        s1 = Square(30, 2, 4, 12)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertEqual("[Square] (12) 2/4 - 30", str(s1))
+
+    def test_create_square_one(self):
+        s1 = Square(13, 4, 8, 12)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertEqual("[Square] (12) 4/8 - 13", str(s2))
+
+    def test_create_square_isnot(self):
+        s1 = Square(4, 2, 3, 6)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertIsNot(s1, s2)
+
+    def test_create_square_equal(self):
+        s1 = Square(4, 2, 3, 6)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertNotEqual(s1, s2)
+
+    """ Test for load from file exercise """
+    @classmethod
+    def Delete(self):
+        """Delete any created files."""
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass

@@ -1,6 +1,6 @@
 -- creates a table
 -- creates a second table in the database and adds multiple rows
-CREATE TABLE IF NOT EXISTS second table(id INT DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS second_table(id INT DEFAULT NULL,
 name VARCHAR(256),
 score INT);
 INSERT INTO `second_table`(`id`, `name`, `score`)

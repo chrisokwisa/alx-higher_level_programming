@@ -22,6 +22,8 @@ What you should learn from this project:
 
  *[0. First constant, first print](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x12-javascript-warm_up/0-javascript_is_amazing.js)*
 * Write a script that prints “Javascript is amazing”:
+
+
  *[1. 3.laanguages](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x12-javascript-warm_up/1-multi_languages.js)*
 * Write a script that prints 3 lines:
  *[2. Arguments](https://github.com/chrisokwisa/alx-higher_level_programming/blob/master/0x12-javascript-warm_up/2-arguments.js)*

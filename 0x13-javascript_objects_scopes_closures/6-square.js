@@ -7,7 +7,7 @@ module.exports = class square extends parentSquare {
     } else {
       let i = 0;
       for (i = 0; i < this.height; i++) {
-	console.log(c.repeat(this.width));
+        console.log(c.repeat(this.width));
       }
     }
   }

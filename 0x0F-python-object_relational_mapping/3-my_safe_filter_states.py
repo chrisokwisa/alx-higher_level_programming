@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module contains a script that safely displays the states table"""
 
 import sys
 import MySQLdb

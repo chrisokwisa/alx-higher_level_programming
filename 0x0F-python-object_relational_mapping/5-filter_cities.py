@@ -11,7 +11,7 @@ if __name__ == "__main__":
     query = "SELECT cities.name FROM cities"
     query = query + " INNER JOIN states ON cities.state_id = states.id"
     query = query + " WHERE states.name = %s ORDER cities BY cities.id ASC"
-    cur.execute(query, sys.argv[4])
+    cur.execute(query, sys.argv[4]])
     query_rows = cur.fetchall()
     print(", ".join([rows[0] for row in query_rows]))
     cur.close()

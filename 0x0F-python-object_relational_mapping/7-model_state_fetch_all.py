@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' lists all states from database hbtn_0e_0_usa using SQLAlchemy'''
+""" lists all states from database hbtn_0e_0_usa using SQLAlchemy"""
 
 
 if __name__ == "__main__":

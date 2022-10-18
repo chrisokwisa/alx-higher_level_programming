@@ -4,7 +4,7 @@ const request = require('request');
 request(process.argv[2], function (error, response) {
   if (error) {
     console.error('error:', error);
-    return;
+  } else {
+    console.log('code:', response.statuscode);
   }
-  console.log('code:', response.statuscode);
 });
